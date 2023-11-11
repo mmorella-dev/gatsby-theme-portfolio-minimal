@@ -1,3 +1,7 @@
+# Disclaimer
+
+This fork is solely used as a submodule in <https://github.com/mmorella-dev/mmorella.dev>. It's personalized specifically for that site, and it's not tested or maintained for general use. I strongly recommend using the original instead as this will probably accumulate cruft and instability over time.
+
 <img src="screenshot.png" alt="Gatsby Theme Portfolio Minimal Screenshot" width="700" />
 
 ---
