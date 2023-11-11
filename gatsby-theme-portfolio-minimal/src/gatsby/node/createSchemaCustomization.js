@@ -41,6 +41,7 @@ module.exports = ({ actions }) => {
     type Interest {
         label: String
         image: Image
+        svg: String
     }
     type InterestsButton {
         visible: Boolean

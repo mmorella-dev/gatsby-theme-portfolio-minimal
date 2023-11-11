@@ -27,13 +27,24 @@ export function InterestsSection(props: PageSection): React.ReactElement {
                     {data.interests.slice(0, shownInterests).map((interest, key) => {
                         return (
                             <Animation key={key} className={classes.Interest} type="scaleIn" delay={key * 100}>
-                                {interest.image.src && (
+                                {
+                                interest.image?.src && (
                                     <GatsbyImage
                                         image={interest.image.src.childImageSharp.gatsbyImageData}
                                         className={classes.Icon}
                                         alt={interest.image.alt || `Interest ${interest.label}`}
                                     />
-                                )}{' '}
+                                )}
+                                {
+                                interest.svg && (
+                                    <img src={interest.svg}
+                                        width="25"
+                                        height="25"
+                                        className={classes.Icon}
+                                        alt={interest.image?.alt || `Interest ${interest.label}`}
+                                    />
+                                )}
+                                {' '}
                                 {interest.label}
                             </Animation>
                         );

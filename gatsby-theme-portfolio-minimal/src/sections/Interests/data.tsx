@@ -10,7 +10,8 @@ interface InterestsSectionQueryResult {
                 visible: boolean;
             };
             interests: {
-                image: ImageObject;
+                image?: ImageObject;
+                svg?: string;
                 label: string;
             }[];
         }[];
@@ -37,6 +38,7 @@ export const useLocalDataSource = (): InterestsSectionQueryResult => {
                             }
                             objectFit
                         }
+                        svg
                         label
                     }
                 }
