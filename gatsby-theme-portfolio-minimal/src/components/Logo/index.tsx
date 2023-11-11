@@ -25,7 +25,7 @@ export function Logo(props: LogoProps): React.ReactElement {
 
     return (
         <div className={classes.Logo} aria-roledescription="logo" style={{ fontSize, color }}>
-            {ThemeSpecificLogo || logo.text}
+            {ThemeSpecificLogo}{logo.text}
         </div>
     );
 }
@@ -36,7 +36,7 @@ const getLogoContent = (image: SiteConfiguration['logo']['image'], fallback: str
     const isSvg = image?.extension === 'svg';
 
     if (hasImage && isSvg && image?.svg?.originalContent) {
-        return <div className="logo-svg-wrapper" dangerouslySetInnerHTML={{ __html: image?.svg.originalContent }} />;
+        return <span className="logo-svg-wrapper" dangerouslySetInnerHTML={{ __html: image?.svg.originalContent }} />;
     }
 
     if (hasImage && isSvg && image?.publicURL) {
